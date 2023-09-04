@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nutricionista</title>
+</head>
+<body>
+    <header>
+        <h1>Nutricionista Maria Silva</h1>
+        <img src="nutricionista.jpg" alt="Foto da Nutricionista">
+        <button id="contact-btn">Contato</button>
+    </header>
+    
+    <section id="about">
+        <h2>Sobre a Nutricionista</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <img src="nutricao.jpg" alt="Nutrição">
+    </section>
+    
+    <section id="services">
+        <h2>Serviços Oferecidos</h2>
+        <ul>
+            <li>Consultas de Nutrição</li>
+            <li>Planos Alimentares Personalizados</li>
+        </ul>
+    </section>
+    
+    <section id="benefits">
+        <h2>Vantagens e Benefícios</h2>
+        <p>Experiência de 10 anos em nutrição. Resultados comprovados...</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>Entre em contato: contato@nutricionistamaria.com | (123) 456-7890</p>
+        <ul>
+            <li><a id="privacy-link" href="#">Política de Privacidade</a></li>
+            <li><a id="terms-link" href="#">Termos de Uso</a></li>
+        </ul>
+    </footer>
+
+    <!-- Pop-ups -->
+    <div class="popup" id="contact-popup">
+        <div class="popup-content">
+            <span class="close" id="close-contact-popup">&times;</span>
+            <h3>Entre em Contato</h3>
+            <p>Aqui você pode adicionar informações de contato ou um formulário de contato mais detalhado.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="privacy-popup">
+        <div class="popup-content">
+            <span class="close" id="close-privacy-popup">&times;</span>
+            <h3>Política de Privacidade</h3>
+            <p>Aqui você pode adicionar informações sobre a política de privacidade da empresa.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="terms-popup">
+        <div class="popup-content">
+            <span class="close" id="close-terms-popup">&times;</span>
+            <h3>Termos de Uso</h3>
+            <p>Aqui você pode adicionar os termos de uso da empresa.</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o pop-up
+        function openPopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.classList.add("show");
+        }
+
+        // Função para fechar o pop-up
+        function closePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.classList.remove("show");
+        }
+
+        // Event listeners para abrir e fechar os pop-ups
+        document.getElementById("contact-btn").addEventListener("click", function() {
+            openPopup("contact-popup");
+        });
+
+        document.getElementById("close-contact-popup").addEventListener("click", function() {
+            closePopup("contact-popup");
+        });
+
+        document.getElementById("privacy-link").addEventListener("click", function() {
+            openPopup("privacy-popup");
+        });
+
+        document.getElementById("close-privacy-popup").addEventListener("click", function() {
+            closePopup("privacy-popup");
+        });
+
+        document.getElementById("terms-link").addEventListener("click", function() {
+            openPopup("terms-popup");
+        });
+
+        document.getElementById("close-terms-popup").addEventListener("click", function() {
+            closePopup("terms-popup");
+        });
+    </script>
+</body>
+</html>
