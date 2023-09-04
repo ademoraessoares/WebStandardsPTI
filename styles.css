@@ -37,8 +37,14 @@ header img {
 /* Estilos das Seções */
 section {
   padding: 20px;
-  max-width: 100%; /* Para se ajustar a telas menores */
+  max-width: 100%;
   box-sizing: border-box;
+}
+
+/* Estilos para a imagem "nutrição.jpg" */
+section img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Estilos do Formulário de Contato */
